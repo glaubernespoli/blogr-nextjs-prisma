@@ -56,7 +56,7 @@ const Header = () => {
 
           a {
             text-decoration: none;
-            color: var(--geist-foreground);
+            color: #000;
             display: inline-block;
           }
 
@@ -91,7 +91,7 @@ const Header = () => {
         <style jsx>{`
           a {
             text-decoration: none;
-            color: var(--geist-foreground);
+            color: #000;
             display: inline-block;
           }
 
@@ -104,7 +104,7 @@ const Header = () => {
           }
 
           .right a {
-            border: 1px solid var(--geist-foreground);
+            border: 1px solid black;
             padding: 0.5rem 1rem;
             border-radius: 3px;
           }
@@ -131,7 +131,7 @@ const Header = () => {
 
           a {
             text-decoration: none;
-            color: var(--geist-foreground);
+            color: #000;
             display: inline-block;
           }
 
@@ -161,7 +161,7 @@ const Header = () => {
         <style jsx>{`
           a {
             text-decoration: none;
-            color: var(--geist-foreground);
+            color: #000;
             display: inline-block;
           }
 
@@ -180,7 +180,7 @@ const Header = () => {
           }
 
           .right a {
-            border: 1px solid var(--geist-foreground);
+            border: 1px solid black;
             padding: 0.5rem 1rem;
             border-radius: 3px;
           }
