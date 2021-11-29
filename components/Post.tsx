@@ -3,7 +3,7 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 
 export type PostProps = {
-  id: number;
+  id: string;
   title: string;
   author: {
     name: string;
