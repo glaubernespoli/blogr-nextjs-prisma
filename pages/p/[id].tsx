@@ -36,6 +36,13 @@ const publishPost = async (id: string, router: NextRouter): Promise<void> => {
   await router.push("/");
 };
 
+const deletePost = async (id: string, router: NextRouter): Promise<void> => {
+  await fetch(`http://localhost:3000/api/post/${id}`, {
+    method: "DELETE",
+  });
+  await router.push("/");
+};
+
 const Post: React.FC<PostProps> = (props) => {
   const { data: session, status } = useSession();
   const router = useRouter();
@@ -59,6 +66,9 @@ const Post: React.FC<PostProps> = (props) => {
         <ReactMarkdown>{props.content}</ReactMarkdown>
         {!props.published && status === "authenticated" && postBelongsToUser && (
           <button onClick={() => publishPost(props.id, router)}>Publish</button>
+        )}
+        {status === "authenticated" && postBelongsToUser && (
+          <button onClick={() => deletePost(props.id, router)}>Delete</button>
         )}
       </div>
       <style jsx>{`
